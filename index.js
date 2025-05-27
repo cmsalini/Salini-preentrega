@@ -27,7 +27,7 @@ function gestor_productos() {
                 .then(response => response.json())
                 .then(data => console.log(data));
 
-        } else if (metodo === 'DELETE') {
+        } else if (metodo === 'DELETE' && ruta.startsWith("products/")) {
             const id = ruta.split('/')[1];
             fetch(`${url_base}/products/${id}`, {
                 method: 'DELETE'
