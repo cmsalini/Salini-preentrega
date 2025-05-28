@@ -5,9 +5,13 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [],
+  "keywords": [
+    "node.js",
+    "API",
+    "consola"
+  ],
   "author": "Camila Salini",
   "license": "ISC",
   "type": "module",
-  "description": ""
+  "description": "TP en Node.js para la gestion de productos a traves de una API ficticia"
 }

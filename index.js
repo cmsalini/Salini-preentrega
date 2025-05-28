@@ -1,8 +1,5 @@
 const url_base = 'https://fakestoreapi.com';
-const argv = process.argv;
-const metodo = argv[2];
-const ruta = argv[3];
-const args = argv.slice(4);
+const [, , metodo, ruta, ...args] = process.argv;
 
 function gestor_productos() {
     try {
@@ -27,7 +24,7 @@ function gestor_productos() {
                 .then(response => response.json())
                 .then(data => console.log(data));
 
-        } else if (metodo === 'DELETE' && ruta.startsWith("products/")) {
+        } else if (metodo === 'DELETE' && ruta.startsWith('products/')) {
             const id = ruta.split('/')[1];
             fetch(`${url_base}/products/${id}`, {
                 method: 'DELETE'
@@ -40,7 +37,7 @@ function gestor_productos() {
         }
 
     } catch (err) {
-        console.error('Error:', err.message);
+        console.error(err.message);
     }
 }
 
