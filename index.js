@@ -1,8 +1,5 @@
 const url_base = 'https://fakestoreapi.com';
-const argv = process.argv;
-const metodo = argv[2];
-const ruta = argv[3];
-const args = argv.slice(4);
+const [, , metodo, ruta, ...args] = process.argv;
 
 function gestor_productos() {
     try {
